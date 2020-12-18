@@ -12,19 +12,19 @@ const words = paragraph.split(' ');
 // Declare a current top word to the first word as a placeholder
 let currentTopWord = words[0];
 
-// Declare a most repated count to 0 so we can compare to this later
+// Declare a most repeated count to 0 so we can compare to this later
 let currentMostRepeatCount = 0;
 
 // Loop over each word, we need the word and its current index in the array
 words.forEach((word, wordIndex) => {
-  // Delcare an map - using an object as its will work well for this 
+  // Declare an map - using an object as its will work well for this 
   let map = {}
 
   // Convert the word into an array of letters and loop over each one
   word.split('').forEach((letter) => {
     // Set the map value for the letter to either the current value +1 or 1 // if its not in there yet
     map[letter] = map[letter] + 1 || 0 + 1;
-    // If the curernt value is higher than the recorded highest repeat.
+    // If the current value is higher than the recorded highest repeat.
     // set the current top word to this one and set the current top repeat 
     // score to this one so we can see if we can beat this.
     if (map[letter] > currentMostRepeatCount) {
